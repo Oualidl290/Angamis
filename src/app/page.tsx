@@ -1,48 +1,40 @@
-import type { NextPage } from 'next';
-import DropdownMenu from './components/page';
+
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 
 export default function Main() {
 
 
-  const categories = ['Football', 'Olympics', 'Crickets' , 'Tennis' , 'Cycling', 'Rugby', 'F1' , 'Golf' , 'Us Sports', 'UAV/FPV', 'E-Sport'];
-  // const Apikey = '3b01cabfdaa646ae8d1a3076ee9d8197' ;
-
 
 
 
   return (
-    <div className='main-container w-[1440px] h-full bg-[#f2f0f0] relative overflow-hidden mx-auto my-0'>
+    <><div className='main-container w-[1440px] h-full bg-[#f2f0f0] relative overflow-hidden mx-auto my-0'>
       <div className='flex h-[54px] flex-col items-center flex-nowrap relative z-[100] mt-[31px] mr-0 mb-0 ml-[164px]'>
-      <div className='h-[53px] self-stretch shrink-0 relative z-[104] w-[1090px]'>
-      <span className="flex w-[184px] h-[53px] justify-center items-start font-['JotiOne'] text-[40px] font-normal leading-[36px] text-[#000] absolute top-0 left-[449px] text-center whitespace-nowrap z-[105]">
-        Angamis.
-      </span>
-       <Link href="/"><span className="flex w-[62px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[6px] text-center whitespace-nowrap z-[106]">
-       Home
-      </span></Link>
-      {/* <span className="flex w-[44px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[757px] text-center whitespace-nowrap z-[107]">
-        News
-      </span> */}
-      <Link href="/follow"><span className="flex w-[59px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[840px] text-center whitespace-nowrap z-[108]">
-        Follow
-      </span></Link>
-      <Link href="/about"><span className="flex w-[63px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[1022px] text-center whitespace-nowrap z-[109]">
-        about
-      </span></Link>
-      <div className="w-[157px] h-[27px] absolute top-[13px] left-[172px] z-[110]">
-        <DropdownMenu categories={categories} />
+        <div className='h-[53px] self-stretch shrink-0 relative z-[104] w-[1090px]'>
+          <span className="flex w-[184px] h-[53px] justify-center items-start font-['JotiOne'] text-[40px] font-normal leading-[36px] text-[#000] absolute top-0 left-[449px] text-center whitespace-nowrap z-[105]">
+            Angamis.
+          </span>
+          <Link href="/"><span className="flex w-[62px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[6px] text-center whitespace-nowrap z-[106]">
+            Home
+          </span></Link>
+          {/* <span className="flex w-[44px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[757px] text-center whitespace-nowrap z-[107]">
+      News
+    </span> */}
+          <Link href="/follow"><span className="flex w-[59px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[840px] text-center whitespace-nowrap z-[108]">
+            Follow
+          </span></Link>
+          <Link href="/about"><span className="flex w-[63px] h-[22px] justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] absolute top-[13px] left-[1022px] text-center whitespace-nowrap z-[109]">
+            about
+          </span></Link>
+          <div className="w-[157px] h-[27px] absolute top-[13px] left-[172px] z-[110] flex  justify-center items-start font-['Comfortaa'] text-[20px] font-bold leading-[20px] text-[#000] text-center">
+          <Link href="/about"><span>All</span></Link></div>
+        </div>
       </div>
-      </div>
-      </div>
-      
-      <div className='w-[1105px] h-[48px] relative overflow-hidden z-[88] mt-[15px] mr-0 mb-0 ml-[187px]'>
+    </div><div className='w-[1105px] h-[48px] relative overflow-hidden z-[88] mt-[15px] mr-0 mb-0 ml-[187px]'>
         <Link href="/follow"><button className='flex w-[100px] h-[48px] pt-[23px] pr-[27px] pb-[23px] pl-[27px] gap-[10px] justify-center items-center flex-nowrap bg-[#d9d9d9] rounded-[20px] border-none absolute top-0 left-[158px] z-[89] pointer'>
           <span className="h-[16px] shrink-0 basis-auto font-['Comfortaa'] text-[14px] font-extrabold leading-[15.616px] text-[#1001b9] relative text-left whitespace-nowrap z-[90]">
-          Football
+            Football
           </span>
         </button></Link>
         <Link href="/follow"><button className='flex w-[100px] h-[48px] pt-[23px] pr-[20px] pb-[23px] pl-[20px] gap-[10px] justify-center items-center flex-nowrap bg-[#d9d9d9] rounded-[20px] border-none absolute top-0 left-0 z-[91] pointer'>
@@ -75,9 +67,7 @@ export default function Main() {
             F1
           </span>
         </button></Link>
-      </div>
-     
-      <div className='flex w-[1106px] flex-col gap-[21px] justify-center items-center flex-nowrap relative z-[19] mt-[0px] mr-0 mb-0 ml-[167px]'>
+      </div><div className='flex w-[1106px] flex-col gap-[21px] justify-center items-center flex-nowrap relative z-[19] mt-[0px] mr-0 mb-0 ml-[167px]'>
         <div className='h-[1203px] self-stretch shrink-0 rounded-[5px] relative overflow-hidden z-20'>
           <div className='flex w-[1066px] gap-[13px] items-start flex-wrap relative z-[21] mt-[20px] mr-0 mb-0 ml-[20px]'>
             <div className='w-[1066px] h-[571px] relative z-[22]'>
@@ -256,11 +246,9 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div>
-      <span className="block h-[38px] font-['Doppio_One'] text-[30px] font-normal leading-[37.5px] text-[#000] relative text-left whitespace-nowrap z-[86] mt-[32px] mr-0 mb-0 ml-[183px]">
+      </div><span className="block h-[38px] font-['Doppio_One'] text-[30px] font-normal leading-[37.5px] text-[#000] relative text-left whitespace-nowrap z-[86] mt-[32px] mr-0 mb-0 ml-[183px]">
         More To Follow
-      </span>
-      <div className='flex w-[1078px] h-[182px] justify-between items-center relative z-[75] mt-[12px] mr-0 mb-0 ml-[181px]'>
+      </span><div className='flex w-[1078px] h-[182px] justify-between items-center relative z-[75] mt-[12px] mr-0 mb-0 ml-[181px]'>
         <div className='w-[444px] h-[182px] shrink-0 bg-[rgba(217,217,217,0.2)] bg-[url(public/assets/7a1283c801ee117f780c36b8a830836ce5518e4d.png)] bg-cover bg-no-repeat rounded-[20px] relative z-[71]'>
           <div className='w-[442px] h-[94px] bg-[url(public/assets/781af91f-555a-4291-bd16-5b512cc79dc9.png)] bg-cover bg-no-repeat rounded-tl-none rounded-tr-none rounded-br-[20px] rounded-bl-[20px] relative z-[76] mt-[88px] mr-0 mb-0 ml-[2px]'>
             <span className="flex h-[22px] justify-start items-start font-['Comfortaa'] text-[20px] font-light leading-[22px] text-[#fff] absolute top-[47px] left-[20px] text-left whitespace-nowrap z-[81]">
@@ -282,8 +270,7 @@ export default function Main() {
             </span>
           </div>
         </div>
-      </div>
-      <div className='flex w-[1078px] h-[182px] justify-between items-center relative z-[73] mt-[12px] mr-0 mb-0 ml-[181px]'>
+      </div><div className='flex w-[1078px] h-[182px] justify-between items-center relative z-[73] mt-[12px] mr-0 mb-0 ml-[181px]'>
         <div className='w-[582px] h-[182px] shrink-0 bg-[rgba(217,217,217,0.2)] bg-[url(public/assets/c5bbd0b3ce29f59b83c3cf69959189a518094eaa.png)] bg-cover bg-no-repeat rounded-[20px] relative z-[73]'>
           <div className='w-[582px] h-[94px] bg-[url(public/assets/bc6f3d90-d882-445f-8d09-1eba8abae06e.png)] bg-cover bg-no-repeat rounded-tl-none rounded-tr-none rounded-br-[20px] rounded-bl-[20px] relative z-[77] mt-[88px] mr-0 mb-0 ml-0'>
             <span className="flex h-[22px] justify-start items-start font-['Comfortaa'] text-[20px] font-light leading-[22px] text-[#fff] absolute top-[47px] left-[22px] text-left whitespace-nowrap z-[84]">
@@ -298,8 +285,7 @@ export default function Main() {
             </span>
           </div>
         </div>
-      </div>
-      <div className='w-[1051px] h-[52px] relative z-[17] mt-[109px] mr-0 mb-0 ml-[195px]'>
+      </div><div className='w-[1051px] h-[52px] relative z-[17] mt-[109px] mr-0 mb-0 ml-[195px]'>
         <div className="w-[82px] h-[31px] font-['Comfortaa'] text-[24px] font-bold leading-[26.76px] absolute top-0 left-0 text-left whitespace-nowrap z-[13]">
           <span className="font-['Coda'] text-[24px] font-extrabold leading-[28.8px] text-[#000] relative text-left">
             About
@@ -327,8 +313,7 @@ export default function Main() {
         <span className="flex h-[34px] justify-start items-start font-['Coda'] text-[24px] font-extrabold leading-[34px] text-[#000] absolute top-[4px] left-[513px] text-left whitespace-nowrap z-[17]">
           Trending Tech Topics
         </span>
-      </div>
-      <div className='w-[1051px] h-[196px] relative z-[16] mt-[12px] mr-0 mb-0 ml-[195px]'>
+      </div><div className='w-[1051px] h-[196px] relative z-[16] mt-[12px] mr-0 mb-0 ml-[195px]'>
         <span className="flex w-[155px] h-[136px] justify-start items-start font-['Comfortaa'] text-[14px] font-light leading-[15.601px] text-[#000] absolute top-0 left-0 text-left z-[14]">
           Tangamis
           <br />
@@ -379,7 +364,6 @@ export default function Main() {
             <div className='w-[20.641px] h-[24px] shrink-0 bg-[url(public/assets/12d08058-1e64-41ff-af6c-70a6c0d0e4ec.png)] bg-cover bg-no-repeat relative z-[11]' />
           </div>
         </div>
-      </div>
-    </div>
+      </div></>
   );
 }
